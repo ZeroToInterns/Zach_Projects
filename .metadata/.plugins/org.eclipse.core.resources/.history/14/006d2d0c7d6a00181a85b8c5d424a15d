@@ -1,0 +1,42 @@
+
+public class Tester {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//class does not have to be instantiated 
+		chooseRoom("dog", true );
+	}
+	
+	//chooseRoom static method method
+	public static void chooseRoom(String animal, boolean isSick) {
+		 if (animal.equalsIgnoreCase("Dog")) {
+			 if (isSick == true ) {
+				 System.out.println("We don't accept sick dogs");
+			 }
+			 else {
+				 System.out.println("Put the dog in the dog room");
+			 }
+		 }
+		 else if (animal == "Cat" || animal == "cat") {
+			 if (isSick == true) {
+				 System.out.println("We don't accept sicks cats");
+			 }
+			 else {
+				 System.out.println("Put the cat in the cat room ");
+			 }
+		 }
+		 else if (animal == "Zebra" || animal == "zebra" ) { 
+			 if (isSick == true ) {
+				 System.out.println("We don't accept sick zebras");
+			 }
+			 else {
+			 System.out.println("put it in the zebra room");
+		 }
+		 }
+		 else {
+			 System.out.println("Looks tasty");
+		 }
+	}
+}
+	
+

@@ -1,0 +1,17 @@
+
+public class Tester {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Student newStudent = new Student("Michael", 4.0);
+		
+		System.out.println(newStudent.getName());
+		newStudent.setName("Mike");
+		System.out.println(newStudent.getName());
+		System.out.println(newStudent.getGpa());
+		newStudent.changeGpa(3.9);
+		System.out.println(newStudent.getGpa());
+	}
+
+}

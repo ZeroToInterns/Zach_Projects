@@ -1,0 +1,13 @@
+
+public class Tester {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int myInt = 10;
+		double myDub = 5; 
+		
+		double result = myInt%myDub;
+		System.out.println(result);
+	}
+
+}

@@ -1,0 +1,47 @@
+import static org.junit.Assert.*; 
+import org.junit.Test;
+
+public class Tester {
+
+//	public static void main(String[] args) {
+//		// TODO Auto-generated method stub
+//
+//		ControlFlowPractice practice = new ControlFlowPractice();
+//		System.out.println("The cost is $" + practice.calculateCost(59.3));
+//		
+//		practice.rollDice(4);
+//		
+//		System.out.println(practice.findLetterAt("o", "Hello World"));
+//	}
+
+	@Test 
+	public void testCalculateCost(){
+		ControlFlowPractice practice = new ControlFlowPractice();
+		System.out.println(practice.calculateCost(100));
+		assertTrue(practice.calculateCost(100) == 100); 
+	}
+	@Test
+	public void testCalculateCost2(){
+		ControlFlowPractice practice = new ControlFlowPractice();
+		System.out.println(practice.calculateCost(50));
+		assertTrue(practice.calculateCost(50) == 100); 
+	}
+	@Test
+	public void testCalculateCost3(){
+		ControlFlowPractice practice = new ControlFlowPractice();
+		System.out.println(practice.calculateCost(25));
+		assertTrue(practice.calculateCost(25) == 50); 
+	}
+	@Test
+	public void testCalculateCost4(){
+		ControlFlowPractice practice = new ControlFlowPractice();
+		System.out.println(practice.calculateCost(0));
+		assertTrue(practice.calculateCost(0) == 10); 
+	}
+	@Test
+	public void testCalculateCost5(){
+		ControlFlowPractice practice = new ControlFlowPractice();
+		System.out.println(practice.calculateCost(200));
+		assertTrue(practice.calculateCost(200) == 0); 
+	}
+}

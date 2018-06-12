@@ -1,0 +1,12 @@
+
+public class ElectronicsStore {
+
+	public static double getPrice(String item) {
+		if (item == "Ipad") {
+			return 300.00;
+		}
+		else (item4 == "Macbook") { 
+			return 1000.00;
+		}
+	}
+}

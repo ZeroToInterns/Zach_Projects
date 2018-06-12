@@ -1,0 +1,31 @@
+
+public class Student {
+
+	//declaring instance variables
+	private String name; 
+	private double Gpa; 
+	
+	//constructor
+	public Student(String name, double Gpa) {
+		this.name = name;
+		this.Gpa = Gpa;
+	}
+	//getName method
+	public String getName() {
+		return name;
+	}
+	//setName method
+	public void setName(String newName) {
+		name = newName; 
+	}
+	//getGpa method
+	public double getGpa() {
+		return Gpa; 
+	}
+	//changeGpa method
+	public void changeGpa(Double newGpa) {
+		Gpa = newGpa;
+	}
+	
+	
+}

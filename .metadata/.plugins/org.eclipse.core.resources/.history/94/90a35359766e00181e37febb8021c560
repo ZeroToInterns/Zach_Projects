@@ -1,0 +1,25 @@
+import static org.junit.Assert.*; 
+import org.junit.Test;
+
+public class Tester {
+
+//	public static void main(String[] args) {
+//		// TODO Auto-generated method stub
+//
+//		ControlFlowPractice practice = new ControlFlowPractice();
+//		System.out.println("The cost is $" + practice.calculateCost(59.3));
+//		
+//		practice.rollDice(4);
+//		
+//		System.out.println(practice.findLetterAt("o", "Hello World"));
+//	}
+
+	@Test 
+	public void testCalculateCost(){
+		ControlFlowPractice practice = new ControlFlowPractice();
+		System.out.println(practice.calculateCost(59.3));
+		assertTrue(practice.calculateCost(59.3) == 100); 
+
+		assertTrue(practice.calculateCost(30.5) == 67); 
+	}
+}

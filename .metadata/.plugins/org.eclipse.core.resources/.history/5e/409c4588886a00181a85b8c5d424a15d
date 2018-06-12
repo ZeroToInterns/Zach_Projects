@@ -1,0 +1,18 @@
+
+public class ElectronicsStore {
+
+	public static double getPrice(String item) {
+		if (item == "Ipad") {
+			return 300.00;
+		}
+		else if (item == "Macbook") { 
+			return 1000.00;
+		}
+		else if (item == "Iphone") { 
+			return 600.00;
+		}
+		else { 
+			return 0.00;
+		}
+	}
+}

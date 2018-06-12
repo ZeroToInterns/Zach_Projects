@@ -1,0 +1,29 @@
+
+public class StringLoops {
+	
+ 
+	public void printHundreds() {
+		for (int i = 0; i < 100; i++) {
+			System.out.println("The value is " + i);
+		}
+	}
+	
+	public void printEvens() {
+		for (int i= 0; i < 100; i+=2) {
+			System.out.println("The value is " + i);
+		}
+	}
+	
+	public int countNumberOfO(String word) {
+		int count = 0;
+		for (int i = 0; i < word.length(); i++ ) {
+			//substring upper limit exclusive
+			//equalsignorecase method allows for both O/o
+			if (word.substring(i, i+1).equalsIgnoreCase("o")) {
+				count++;
+			}
+		}
+		return count;
+	}
+}
+

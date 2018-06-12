@@ -1,0 +1,15 @@
+
+public class Tester {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		ControlFlowPractice practice = new ControlFlowPractice();
+		System.out.println("The cost is $" + practice.calculateCost(59.3));
+		
+		practice.rollDice(4);
+		
+		practice.findLetterAt(0, "Hello");
+	}
+
+}
