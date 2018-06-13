@@ -14,8 +14,8 @@ public class Tester {
 //		System.out.println(carOne.getCurrentRange());
 //		System.out.println(carOne.getMaxRange());
 		
-		SodaCan pepsi = new SodaCan(2, 2);
-		SodaCan sprite = new SodaCan(100, 5.6);
+		SodaCan pepsi = new SodaCan(2.0, 2.0);
+		SodaCan sprite = new SodaCan(100.0, 5.6);
 		
 		System.out.println(pepsi.getRadius());
 		System.out.println(pepsi.getHeight());
