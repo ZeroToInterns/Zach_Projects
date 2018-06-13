@@ -6,13 +6,24 @@ public class Tester {
 
 		ElectricCar carOne = new ElectricCar("Tesla", 5000);
 		
-		carOne.charge();
-		carOne.drive(4000);
-		carOne.getMake();
-		carOne.getCurrentRange();
-		System.out.println(carOne.getMake());
-		System.out.println(carOne.getCurrentRange());
-		System.out.println(carOne.getMaxRange());
+//		carOne.charge();
+//		carOne.drive(4000);
+//		carOne.getMake();
+//		carOne.getCurrentRange();
+//		System.out.println(carOne.getMake());
+//		System.out.println(carOne.getCurrentRange());
+//		System.out.println(carOne.getMaxRange());
+		
+		SodaCan pepsi = new SodaCan(2, 2);
+		SodaCan sprite = new SodaCan(100, 5.6);
+		
+		System.out.println(pepsi.getRadius());
+		System.out.println(pepsi.getHeight());
+		System.out.println(pepsi.getContents());
+		pepsi.drink(10.5);
+		System.out.println(pepsi.getContents());
+		System.out.println(pepsi.compareTo(sprite));
+		
 	}
 
 }

@@ -37,6 +37,7 @@ public class ElectricCar {
 		return this.currentCharge;
 	}
 	
+	//returns max range of car
 	public int getMaxRange() {
 		return this.maxRange;
 	}
