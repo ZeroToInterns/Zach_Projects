@@ -1,7 +1,0 @@
-
-		
-		public void printVariables(){
-			String myName = "Michael";
-			System.out.println(myName);
-		}
-}

@@ -24,13 +24,18 @@ public class Tester {
 //		System.out.println(pepsi.getContents());
 //		System.out.println(pepsi.compareTo(sprite));
 		
-		SubSandwich sandwichOne = new SubSandwich(1,9,false); 
-		System.out.println(sandwichOne.getSize());
-		sandwichOne.setSize(12);
-		System.out.println(sandwichOne.getSize());
-		System.out.println(sandwichOne.isExtraMeat());
-		System.out.println(sandwichOne.getType());
-		System.out.println(sandwichOne.getCost());
+//		SubSandwich sandwichOne = new SubSandwich(1,9,false); 
+//		System.out.println(sandwichOne.getSize());
+//		sandwichOne.setSize(12);
+//		System.out.println(sandwichOne.getSize());
+//		System.out.println(sandwichOne.isExtraMeat());
+//		System.out.println(sandwichOne.getType());
+//		System.out.println(sandwichOne.getCost());
+		
+	
+		LoopFun looper = new LoopFun();
+		System.out.println(looper.sumSeries(4));
+		
 		
 		
 	}
