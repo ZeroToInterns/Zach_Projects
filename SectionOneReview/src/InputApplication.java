@@ -24,7 +24,6 @@ public class InputApplication {
 		//casting double value to integer 
 		int product = (int) num1 * num2;
 		System.out.println(product);
-		
 	}
 
 }

@@ -31,13 +31,15 @@ public class Tester {
 //		System.out.println(sandwichOne.isExtraMeat());
 //		System.out.println(sandwichOne.getType());
 //		System.out.println(sandwichOne.getCost());
-		
 	
-		LoopFun looper = new LoopFun();
-		System.out.println(looper.sumSeries(4));
+//		LoopFun looper = new LoopFun();
+//		System.out.println(looper.getEcount("Elephant"));
 		
-		
-		
+		LoanApplicant Jim = new LoanApplicant(120000, 4);
+		Jim.setAnnualSalary(20000);
+		System.out.println(Jim.qualifies());
+		Jim.setYearsOnJob(5);
+		System.out.println(Jim.getYearsOnJob());
 	}
 
 }

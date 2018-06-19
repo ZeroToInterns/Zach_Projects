@@ -39,7 +39,12 @@ public class SodaCan implements Comparable<SodaCan> {
 	}
 	//drink method subtracts fluidOunces parameter from current volume/contents of soda can 
 	public void drink(double fluidOunces) {
-		this.currentContents = currentContents - fluidOunces;
+		if (this.currentContents < fluidOunces) {
+			System.out.println("Not enough to drink");
+		}
+		else {
+			this.currentContents = currentContents - fluidOunces;
+		}
 	}
 	//getContents method returns the amount of fluid ounces left in can
 	public double getContents() {
@@ -52,11 +57,11 @@ public class SodaCan implements Comparable<SodaCan> {
 		if(this.currentContents > o.currentContents) {
 			return 1;
 		}
-		else if (this.currentContents == o.currentContents) {
-			return 0;
+		else if (this.currentContents < o.currentContents) {
+			return -1;
 		}
 		else {
-			return -1;
+			return 0;
 		}
 	}
 	

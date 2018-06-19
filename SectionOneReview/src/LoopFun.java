@@ -2,10 +2,12 @@ import java.util.*;
 
 import javax.swing.*;
 
+import org.junit.platform.commons.util.StringUtils;
+
 public class LoopFun {
 
 	//getPermutationCount method calculates n!
-	public static int getPermutationCount(int n) {
+	public int getPermutationCount(int n) {
 		//initialize number of permutations to 1, single number always has one unique way of formatting
 		int numOfPermutations = 1;
 		//if parameter is less than or equal to 0
@@ -24,7 +26,8 @@ public class LoopFun {
 	
 	//removesDuplicates method returns string with one of each unique letter in given order 
 	public String removesDuplicates(String word) {
-		String string2 = null;
+		String result = "";
+		HashSet <String> set= new HashSet<String>();
 		try {
 			//if word is empty 
 			if (word == null || word.isEmpty()) {
@@ -32,51 +35,93 @@ public class LoopFun {
 				throw new RuntimeException("String is empty");
 			}
 			else {
-				//convert string to new character array
-				char[] chars = word.toCharArray();
-				//convert array to Linked Hash set to preserve ordering and remove duplicates
-				Set <Character> charSet = new LinkedHashSet<Character>();
-				//for loop loops through each element in array 
-				for (char c: chars) {
-					//add each unique letter to the array 
-					charSet.add(c);
+				for (int i = 0; i < word.length(); i++) {
+					String currentLetter = word.substring(i, i+1);
+					if (set.add(currentLetter)) {
+						result += currentLetter;
+					}
 				}
-				//like String, but treated like variable length array 
-				StringBuilder sb = new StringBuilder();
-				//loop through each character in charSet (linked hash set)
-				for (Character character: charSet) {
-					//.append method adds the last character to the string builder
-					sb.append(character);
-				}
-				//method returns string, convert StringBuilder to string
-				string2 = sb.toString();
 			}
 		}
 		//runtime exception thrown here
 		catch (RuntimeException exc) {
 			JOptionPane.showMessageDialog(null, exc.getMessage());
 		}
-	return string2;
+	return result;
 	}
 	
-	//loops through series and returns sum of all values
+	//method loops through series and returns sum of all values
 	public double sumSeries(int n) {
-		int count =0;
-		double sum = 0;
-		//if parameter is 0 or negative
+		double startingNum = 2;
+		double result = 0;
 		if (n <= 0) {
-			sum = 0;
+			result = 0;
 		}
-		else { 
-			for (int i = 2; i > 0; i = i/2) {
-				sum+=i;
-				count++;
-				if (count == n) {
-					return sum;
+		else {
+			for (int i = 0; i < n; i++) {
+				result += startingNum;
+				startingNum = startingNum/2;
+			}
+		}
+		return result;
+	}
+	
+	//method receives integer parameter and multiplies user input numbers
+	public int product (int n) {
+		//creating new scanner object
+		Scanner in = new Scanner(System.in);
+		int product = 1;
+		if (n==0) {
+			product = 0;
+		}
+		else if (n < 0) {
+			product = -1;
+		}
+		else {
+			for(int i = 1; i <= n; i++) {
+				System.out.println("Enter integer " + i + ": ");
+				//product takes user input and multiplies it by 1, then past input
+				product = product * in.nextInt();
+			}
+		}
+		return product;
+	}
+	
+	//method returns exponent in expression 2^i where result is less than value parameter
+	public int largestPowerLessThan(int value) {
+		if (value <= 1) {
+			return -1;
+		}
+		else {
+			for(int i= 0; i< value; i++) {
+				//math.pow is static method that does 2^i
+				//casting 2^i to integer
+				if (value <= (int) Math.pow(2,i)) {
+					return i-1;
 				}
 			}
 		}
+		return 0;
+	}
+	
+	//method returns sum of all odd values less than value parameter
+	public int sumOdd (int value) {
+		int sum = 0;
+		for(int i = 1; i < value; i = i+2) {
+				sum += i;
+			}
 		return sum;
+	}
+	
+	//method returns the number of E/e in a word 
+	public int getEcount(String word) {
+		int count = 0;
+		for(int i = 0; i < word.length(); i++) {
+			if( word.substring(i, i + 1).equalsIgnoreCase("e")) {
+				count++;
+			}
+		}
+		return count;
 	}
 }
 
