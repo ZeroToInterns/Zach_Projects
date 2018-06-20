@@ -19,7 +19,7 @@ public class ArrayListPractice {
 		addSecondToLast(myArrayList, "Black");
 		System.out.println(myArrayList);
 		System.out.println(countElements(myArrayList,"Red"));
-		replaceColor(myArrayList, "Red", "Donkey");
+		replaceColor(myArrayList, "Blue", "White");
 		System.out.println(myArrayList);
 	}
 	
@@ -36,7 +36,7 @@ public class ArrayListPractice {
 		int count = 0;
 		//size is 10 but index is 9
 		for (int i = 1; i < list.size(); i++) {
-			if (color == list.get(i)) {
+			if (color.equals(list.get(i))) {
 				count++;
 			}
 		}
@@ -45,7 +45,7 @@ public class ArrayListPractice {
 	//replaceColor method replaces all occurrences of color with second color
 	public static void replaceColor(ArrayList<String> list, String color, String newColor) {
 		for(int i = 1; i < list.size(); i++) {
-			if (color == list.get(i)){
+			if (color.equals(list.get(i))){
 				list.set(i, newColor);
 			}
 		}

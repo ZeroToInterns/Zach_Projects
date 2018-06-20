@@ -10,4 +10,5 @@
 <fullyQualifiedTypeName name="org.junit.platform.commons.util.StringUtils"/>
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="java.util.StringTokenizer"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
